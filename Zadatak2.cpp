@@ -1,7 +1,22 @@
 #include <iostream>
 #include <time.h>
 using namespace std;
+    /*
+        Korisnik prvo unosi broj elemenata a zatim i elemente niza. Potrebno je uraditi sljedece:
 
+        -varijable a i b predstavljaju dimenzije nizova.
+
+        -maksElement(niz,velNiza) - funkcija koja vraca vrijednost maksimalnog elementa niza, tip je double.
+
+        -veci(niz1,niz2,velNiz1,velNiz2) - funkcija koja provjerava koja maksimalna vrijednost elementa od prosljeđenih nizova 
+         je veca. Ako prvi niz ima veci max element vraca true, ako je to drugi niz vraca false.
+
+        -printaj(niz,velNiz) - funkcija koja ispisuje niz i odvaja svaki broj sa zarezom.
+
+        -mijenjaj(niz,clan,broj)- funkcija koj u nizu pronalazi prosljeđeni clan i mijenja ga sa brojem koji smo proslijedili.
+    
+    
+    */
 int a,b;
 
 double maksElement(double niz[], int velNiz){
