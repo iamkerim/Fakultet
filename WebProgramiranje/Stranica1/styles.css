@@ -1,0 +1,87 @@
+.Section1 { 
+    height: 380px;
+    background-color: lightgray;
+   
+}
+
+.Section2 {
+    height: 180px;
+    background-color: orange;
+    border-top: 8px solid brown;
+}
+
+.Section3 {
+    height: 180px;
+    background-color: lightblue;
+    border-top: 8px solid green;
+
+}
+
+.image { 
+    height: 300px;
+
+    position: relative;
+    padding-left: 40%;
+}
+
+.Section1 h2{
+    text-align: center;
+    
+}
+
+.Section2 h2 {
+    width: 400px;
+    background-color: brown;
+    font-size: 18px;
+    border: 8px solid brown;
+    position: relative;
+    bottom: 15px;
+    color: white;
+    text-align: center;
+
+}
+
+.Section2 p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.Section3 h2 {
+    width: 400px;
+    background-color: green;
+    font-size: 18px;
+    border: 8px solid green;
+    position: relative;
+    bottom: 15px;
+    color: white;
+    text-align: center;
+}
+
+.Section3 ul {
+    text-align: center;
+    list-style-type: none;
+}
+
+.Section4 {
+    height: 400px;
+    background-color: antiquewhite;
+    border-top: 8px solid chocolate;
+}
+
+.Section4 h2 {
+    width: 400px;
+    background-color: chocolate;
+    font-size: 18px;
+    border: 8px solid chocolate;
+    position: relative;
+    bottom: 15px;
+    color: white;
+    text-align: center;
+}
+
+.Section4 img {
+    height: 250px;
+    position: relative;
+    left: 12%;
+    
+}
