@@ -1,45 +1,57 @@
 #include <iostream>
-
 using namespace std;
-
 /*
-    Unijeti broj elemenata niza.  Unijeti niz. Ispisati niz po rastućem i po opadajućem redoslijedu.
+
+    1)  Napraviti  program  u  kojem  se  od  korisnika  traži  da  broj  elemenata  niza  i  zatim  i  članove niza  koji  moraju  biti  parni.
+    (Korisnik  unosi  članova  niza,  ako  je  taj  broj  neparan  traži  se ponovni unos tog  broja)
+    Potrebno  je  sve  elemente  nizu  pomjeriti  za  jedno  mjesto  u  lijevo,  drugi  ide  na  prvo  mjesto, treći ide  na  drugo  mjesto, ...
+    prvi član ide  na  posljednje mjesto.
 
 */
-
 int main(){
 
 int n;
-cout<<"Enter array size: ";
+cout<<"Unesite broj clanova niza: ";
 cin>>n;
 
-int arr[n];
+int niz[n];
 
-cout<<"Enter elements: ";
+cout<<"Unijeti clanove niza:\n";
 for(int i=0;i<n;i++){
-    cin>>arr[i];
-}
-
-int temp;
-for(int i=0;i<n;i++){
-    for(int j=i+1;j<n;j++){
-        if(arr[j]>arr[i]){
-            temp=arr[i];
-            arr[i]=arr[j];
-            arr[j]=temp;
-        }
+    naredba:cout<<"niz["<<i+1<<"] ";
+    cin>>niz[i];
+    if(niz[i]%2==1){
+        cout<<"Broj nije paran!\n";
+        goto naredba;;
     }
 }
-cout<<"\nSorted decreasing:\n";
+
+cout<<"\nUnijeti brojevi su:"<<endl;
+
 for(int i=0;i<n;i++){
-    cout<<arr[i]<<" ";
+    cout<<niz[i]<<" ";
 }
 
 
-cout<<"\nSorted ascending :\n";
-for(int i=n-1;i>=0;i--){
-    cout<<arr[i]<<" ";
+int last;
+last=niz[0];
+
+//prva opcija
+/*int temp;
+for(int i=0;i<n;i++){
+    temp=niz[i+1];
+    niz[i]=temp;
+*/
+
+
+//druga opcija
+cout<<"\nNiz poslije zamjene:"<<endl;
+for(int i=1;i<n;i++){
+    cout<<niz[i]<<" ";
 }
+
+cout<<last;
+
 
 return 0;
 }
