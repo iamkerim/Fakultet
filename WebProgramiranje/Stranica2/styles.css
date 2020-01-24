@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;   
+}
+
+.zivCarstvo {
+    background-color: #f7c500;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.zivCarstvo h2 {
+    
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    top: 35px;
+}
+
+.lav {
+    background-color: black;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.lav h1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    top: 60px;
+
+}
+
+.opis{
+    height: 200px;
+    background-color: #f7f7f7;
+}
+
+.opis p {
+    color: #000;
+    padding: 20px;
+}
+
+.images {
+    display: block;
+    text-align: center;
+    background-color: #000;
+    padding-top: 5px;
+}
+
+.img1 {
+    height: 230px;
+    width: 320px;
+}
+
+.img2 {
+    height: 230px;
+    width: 320px;
+}
+
+.img3 {
+    height: 230px;
+    width: 320px;
+}
+
+.img4 {
+    height: 230px;
+    width: 320px;
+}
+
+.footer {
+    height: 80px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.footer p {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    top: 25px;
+    color: white;
+} 
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    
+    .images {
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .img1 {
+       width: 50%;
+       padding: 5px 60px;
+    }
+
+    .img2 {
+        width: 50%;
+        padding: 5px 60px;
+    }
+
+    .img3 {
+        width: 50%;
+        padding: 5px 60px;
+     }
+
+    .img4 {
+        width: 50%;
+        padding: 5px 60px;
+    }
+
+    .order {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .images {
+        flex: 1;
+        order: 1;
+    }
+
+    .opis {
+        flex: 2;
+        order: 2;
+    }
+}
+
+@media only screen and (min-width: 961px){
+   
+    .img1 {
+        height: auto;
+    }
+
+    .img2 {
+        height: auto;
+    }
+
+    .img3 {
+        height: auto;
+    }
+
+    .img4 {
+        display: none;
+    }
+
+    .images {
+        height: auto;
+    }
+}
