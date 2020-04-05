@@ -1,57 +1,53 @@
 #include <iostream>
 using namespace std;
+
 /*
-
-    1)  Napraviti  program  u  kojem  se  od  korisnika  traži  da  broj  elemenata  niza  i  zatim  i  članove niza  koji  moraju  biti  parni.
-    (Korisnik  unosi  članova  niza,  ako  je  taj  broj  neparan  traži  se ponovni unos tog  broja)
-    Potrebno  je  sve  elemente  nizu  pomjeriti  za  jedno  mjesto  u  lijevo,  drugi  ide  na  prvo  mjesto, treći ide  na  drugo  mjesto, ...
-    prvi član ide  na  posljednje mjesto.
-
+    Napišite program koji od korisnika traži da sa tastature unese rečenicu, a koji će zatim
+    ispisati unesenu rečenicu bez prve riječi te rečenice. Unesena rečenica se smješta u
+    klasični niz znakova (dakle, ne u promjenljivu tipa “string”). Za realizaciju zadatka
+    koristiti isključivo pokazivačku aritmetiku. Nije dozvoljena upotreba funkcija iz
+    biblioteka “cstring” niti “string”, kao ni upotreba indeksiranja (uključujući i njegovu
+    trivijalnu simulaciju koja podrazumijeva pisanje “*(a + n)” umjesto “a[n]”).
 */
+
+
+//funkcija za ispis
+void ispis(char* recenica,int index){
+
+/*
+    Ova for petlja kreće od index+1, gdje je index mjesto gdje se nalazi prvi razmak u rečenici,
+    odnosno kraj prve riječi, a dodajem +1 iz razloga da preskočim taj razmak, odnosno da mi
+    ispis krene od druge riječi u rečenici, a ne od razmaka.
+*/
+for(int i=index+1;recenica[i]!='\0';i++){
+    cout<<recenica[i];
+}
+
+}
+
 int main(){
 
-int n;
-cout<<"Unesite broj clanova niza: ";
-cin>>n;
+//Deklaracija recenice kao niza karaktera i pomoćne varijable index
+char *recenica=new char[100];
+int index;
 
-int niz[n];
+//Unos rečenice
+cout<<"Unesite recenicu: ";
+cin.getline(recenica,100);
 
-cout<<"Unijeti clanove niza:\n";
-for(int i=0;i<n;i++){
-    naredba:cout<<"niz["<<i+1<<"] ";
-    cin>>niz[i];
-    if(niz[i]%2==1){
-        cout<<"Broj nije paran!\n";
-        goto naredba;;
+/*
+    For petlja ide kroz niz karaktera sve do kraja niza.
+    Kada dođe do prvog razmaka u nizu uzima index od te pozicije u nizu i završava for petlju.
+*/
+for(int i=0;recenica[i]!='\0';i++){
+    if(recenica[i]==' '){
+        index=i;
+        break;
     }
 }
 
-cout<<"\nUnijeti brojevi su:"<<endl;
-
-for(int i=0;i<n;i++){
-    cout<<niz[i]<<" ";
-}
-
-
-int last;
-last=niz[0];
-
-//prva opcija
-/*int temp;
-for(int i=0;i<n;i++){
-    temp=niz[i+1];
-    niz[i]=temp;
-*/
-
-
-//druga opcija
-cout<<"\nNiz poslije zamjene:"<<endl;
-for(int i=1;i<n;i++){
-    cout<<niz[i]<<" ";
-}
-
-cout<<last;
-
+//poziv void funkcije za ispis niza
+ispis(recenica,index);
 
 return 0;
 }
