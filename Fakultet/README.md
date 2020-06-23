@@ -1,1 +1,1 @@
-Here I have homework problems from school.
+Here I have some homework assignments that I did in college.
