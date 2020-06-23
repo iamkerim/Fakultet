@@ -1,1 +1,1 @@
-Here I have some of solved problems from www.dailycodingproblems.com.
+Here I have some of solved problems from www.dailycodingproblem.com.
