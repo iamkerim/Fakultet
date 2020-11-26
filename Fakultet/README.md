@@ -1,1 +1,1 @@
-Here I have some homework assignments that I did in college.
+Here I have some homework assignments that I did during first semester.
